@@ -11,7 +11,7 @@ This project provide a plugin for Gephi to load graphic data processed by Vertic
 
 ### Installation
 
-  You can install Vertica driver plugin for Gephi by [downloading](./releases) the latest version of binary, or build it from the source code.
+  You can [download](../../releases) the latest version of binary, or build it from the source code, than install it in Gephi.
 
 #### Requirements
 
@@ -19,11 +19,11 @@ This project provide a plugin for Gephi to load graphic data processed by Vertic
 
 - [Optional] [Apache Maven](http://maven.apache.org/) version 3.2.2 or later for build from source code.
 
-- [Optional] Vertica JDBC Driver in maven repository for build from source code.
+- [Optional] Vertica JDBC driver in maven repository for build from source code.
 
   ``` BASH
   $ wget -O /tmp/vertica-jdbc-10.0.0-0.jar https://www.vertica.com/client_drivers/10.0.x/10.0.0-0/vertica-jdbc-10.0.0-0.jar
-  $
+   
   $ mvn install:install-file -DgroupId=com.vertica -DartifactId=vertica-jdbc -Dversion=10.0.0-0 -Dpackaging=jar -DgeneratePom=true -Dfile=/tmp/vertica-jdbc-10.0.0-0.jar
   
   $ rm /tmp/vertica-jdbc-10.0.0-0.jar
@@ -31,11 +31,16 @@ This project provide a plugin for Gephi to load graphic data processed by Vertic
 
 #### [Optional] Build from source code
 
-You will get binary package under [target/] after correctly running following commands under top of souce code tree.
+You will get binary under [target/] after correctly running following commands under top of souce code tree.
 
 ``` BASH
-mvn clean package
-ls -l target/*.nbm
+$ git clone https://github.com/dingqiangliu/vertica4gephi.git
+
+$ cd vertica4gephi/
+
+$ mvn clean package
+
+$ ls -l target/*.nbm
 ```
 
 #### Install this plugin
